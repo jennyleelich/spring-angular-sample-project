@@ -26,9 +26,10 @@ export class ProductService {
 	map(response => response._embedded.productCategory)
   )
   }
-  searchProducts(searchName: string): Observable<Product[]> {
+  searchProducts(thePage:number, thePageSize:number, searchName: string): Observable<GetResponseProducts> {
 	const searchUrl = `http://localhost:8080/api/products/search/findByNameContaining?name=${searchName}`
-	return this.getProducts(searchUrl);
+	                   + `&page=${thePage}&size=${thePageSize}`
+	return this.http.get<GetResponseProducts>(searchUrl);
   }
 
   private getProducts(searchUrl: string): Observable<Product[]> {
@@ -40,6 +41,12 @@ export class ProductService {
   public getProduct(productId: number): Observable<Product> {
 	const url = `http://localhost:8080/api/products/${productId}`
 	return this.http.get<Product>(url)
+  }
+
+  public getProductListPaginate(thePage:number, thePageSize:number, theCategoryId: number): Observable<GetResponseProducts> {
+	const searchUrl = `http://localhost:8080/api/products/search/findByCategoryId?id=${theCategoryId}`
+	                   + `&page=${thePage}&size=${thePageSize}`
+	return this.http.get<GetResponseProducts>(searchUrl)
   }
 }
 
