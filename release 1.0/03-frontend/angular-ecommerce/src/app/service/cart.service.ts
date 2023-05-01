@@ -8,9 +8,11 @@ import { Product } from '../common/product';
 })
 export class CartService {
   cartItems: CartItem[] = [];
-  constructor() { }
   totalPrice: Subject<number> = new Subject<number>();
   totalQuantity: Subject<number> = new Subject<number>();
+  totalPriceValue: number = 0;
+  totalQuantityValue: number = 0;
+  constructor() { }
   addToCart(theCartItem: CartItem) {
     let alreadyExistsInCart: boolean = false;
     let existingCartItem: CartItem | undefined;
@@ -27,13 +29,13 @@ export class CartService {
 }
 
 	computeCartTotals() {
-		let totalPriceValue: number = 0;
-		let totalQuantityValue: number = 0;
+		this.totalPriceValue = 0;
+		this.totalQuantityValue = 0;
 		for(let currentCartItem of this.cartItems) {
-			totalPriceValue += currentCartItem.quantity * currentCartItem.unitPrice;
-			totalQuantityValue += currentCartItem.quantity;
+			this.totalPriceValue += currentCartItem.quantity * currentCartItem.unitPrice;
+			this.totalQuantityValue += currentCartItem.quantity;
 		}
-		this.totalPrice.next(totalPriceValue);
-		this.totalQuantity.next(totalQuantityValue);
+		this.totalPrice.next(this.totalPriceValue);
+		this.totalQuantity.next(this.totalQuantityValue);
 	}
 }
