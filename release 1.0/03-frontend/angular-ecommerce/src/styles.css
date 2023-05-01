@@ -325,8 +325,6 @@ input.au-input.au-input-xl{
 
 .menu-sidebar .logo{
     background:#fff;
-    height:75px;
-    padding:0 35px;
     display:-webkit-box;
     display:-webkit-flex;
     display:-moz-box;
@@ -963,7 +961,7 @@ footer ul li{
         height:80px
     }
     a.logo img{
-        width:110px
+        width:130px
     }
 
     .cart-area i{
