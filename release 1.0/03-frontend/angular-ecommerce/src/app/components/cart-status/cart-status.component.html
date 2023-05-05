@@ -1,8 +1,8 @@
 
 <div class="cart-area d-n">
     <a routerLink="/cartDetail">
-        <div class="total"> {{totalPrice | currency: 'USD'}}
-            <span> {{totalQuantity}}</span> 
+        <div class="total"> {{cartService.totalPriceValue | currency: 'USD'}}
+            <span> {{cartService.totalQuantityValue}}</span> 
         </div> 
         <i class="fa fa-shopping-cart"
             aria-hidden="true" ></i>
