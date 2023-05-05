@@ -93,7 +93,7 @@ export class CheckoutComponent implements OnInit{
             customer: this.formBuilder.group({
                 firstName: new FormControl('', [Validators.required, Validators.minLength(2), FormValidators.notOnlyWhitespace]),
                 lastName: new FormControl('', [Validators.required, Validators.minLength(2), FormValidators.notOnlyWhitespace]),
-                email: new FormControl('',
+                email: new FormControl(JSON.parse(sessionStorage.getItem('userEmail')!),
                 [Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')])
             }),
             shippingAddress: this.formBuilder.group({
@@ -183,6 +183,8 @@ export class CheckoutComponent implements OnInit{
     resetCart() {
         // reset cart data
         this.cartService.cartItems = [];
+        this.cartService.totalPriceValue = 0;
+        this.cartService.totalQuantityValue = 0;
         this.cartService.totalPrice.next(0);
         this.cartService.totalQuantity.next(0);
         // reset the form

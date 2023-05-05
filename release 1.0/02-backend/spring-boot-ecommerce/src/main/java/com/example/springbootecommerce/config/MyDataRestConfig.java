@@ -17,6 +17,7 @@ import com.example.springbootecommerce.entity.Product;
 import com.example.springbootecommerce.entity.ProductCategory;
 import com.example.springbootecommerce.entity.Country;
 import com.example.springbootecommerce.entity.State;
+import com.example.springbootecommerce.entity.Order;
 
 import jakarta.persistence.EntityManager;
 //import jakarta.persistence.*;
@@ -47,6 +48,9 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
         
         // disable HTTP methods for State: PUT, POST, DELETE and PATCH
         disableHttpMethods(State.class, config, theUnsupportedActions);
+        
+     // disable HTTP methods for Order: PUT, POST, DELETE and PATCH
+        disableHttpMethods(Order.class, config, theUnsupportedActions);
 
         exposeIds(config);
     }
