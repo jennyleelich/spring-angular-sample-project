@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, map, of } from 'rxjs';
 import { Country } from '../common/country';
 import { State } from '../common/state';
+import { environment } from 'src/environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
@@ -30,14 +31,14 @@ export class FormService {
   }
 
   getCountries(): Observable<Country[]> {
-    const url = 'http://localhost:8080/api/countries'
+    const url = environment.jennyShopUrl + '/countries';
     return this.http.get<GetResponseCountries>(url).pipe(
         map(response => response._embedded.countries)
     )
   }
 
   getStateByCountryCode(countryCode: string):Observable<State[]> {
-    const url = 'http://localhost:8080/api/states/search/findByCountryCode?code='+ countryCode;
+    const url = environment.jennyShopUrl + '/states/search/findByCountryCode?code='+ countryCode;
     return this.http.get<GetResponseStates>(url).pipe(
         map(response => response._embedded.states)
     )

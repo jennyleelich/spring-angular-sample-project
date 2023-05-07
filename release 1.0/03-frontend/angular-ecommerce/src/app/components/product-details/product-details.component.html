@@ -1,11 +1,16 @@
-<div class="detail-section">
+<div class="detail-section" style="margin-top: 100px; margin-left:20px">
+    <div class=" row">
+        <div class="col-3 thumbnail">
+            <img src="{{product.imageUrl}}"  alt="">
+            <p>{{product.name}}</p>
+            <div class="caption">
+                <div class="price">{{product.unitPrice |currency: 'USD'}}</div>
+                <button class="btn btn-primary btn-sm" (click)="addToCart()">Add to cart</button>
+            </div>
+        </div>
+    </div>
     <div class="container-fluid">
-        <img src="{{product.imageUrl}}" class="detail-img" alt="">
-
-        <h3>{{product.name}}</h3>
-        <div class="price">{{product.unitPrice |currency: 'USD'}}</div>
-        <button class="btn btn-primary btn-sm" (click)="addToCart()">Add to cart</button>
-
+        
         <hr>
         <h4>Description</h4>
         <p>{{product.description}}</p>

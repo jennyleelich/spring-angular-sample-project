@@ -1,3 +1,4 @@
 export const environment = {
-    jennyShopUrl: "https://localhost:4200/api"
+    production: false,
+    jennyShopUrl: "https://localhost:4230/api"
 };

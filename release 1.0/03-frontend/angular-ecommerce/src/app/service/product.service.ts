@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import { Product } from '../common/product';
 import { ProductCategory } from '../common/product-category';
+import { environment } from 'src/environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
@@ -11,23 +12,25 @@ export class ProductService {
  
 
   private baseUrl = "http://localhost:8080/api/products?size=100"
+  private env = environment;
 
   constructor(private http: HttpClient) {
 
+
    }
   getProductList(currentCategoryId: number): Observable<Product[]> {
-	const searchUrl = `http://localhost:8080/api/products/search/findByCategoryId?id=${currentCategoryId}`
+	const searchUrl = this.env.jennyShopUrl + `/products/search/findByCategoryId?id=${currentCategoryId}`
 	return this.getProducts(searchUrl);
   }
 
   getProductCategories(): Observable<ProductCategory[]> {
-	const url = `http://localhost:8080/api/product-category`
+	const url = this.env.jennyShopUrl + `/product-category`
 	return this.http.get<GetResponseProductCategory>(url) .pipe(
 	map(response => response._embedded.productCategory)
   )
   }
   searchProducts(thePage:number, thePageSize:number, searchName: string): Observable<GetResponseProducts> {
-	const searchUrl = `http://localhost:8080/api/products/search/findByNameContaining?name=${searchName}`
+	const searchUrl = this.env.jennyShopUrl + `/products/search/findByNameContaining?name=${searchName}`
 	                   + `&page=${thePage}&size=${thePageSize}`
 	return this.http.get<GetResponseProducts>(searchUrl);
   }
@@ -39,12 +42,12 @@ export class ProductService {
   }
 
   public getProduct(productId: number): Observable<Product> {
-	const url = `http://localhost:8080/api/products/${productId}`
+	const url = this.env.jennyShopUrl + `/products/${productId}`
 	return this.http.get<Product>(url)
   }
 
   public getProductListPaginate(thePage:number, thePageSize:number, theCategoryId: number): Observable<GetResponseProducts> {
-	const searchUrl = `http://localhost:8080/api/products/search/findByCategoryId?id=${theCategoryId}`
+	const searchUrl = this.env.jennyShopUrl + `/products/search/findByCategoryId?id=${theCategoryId}`
 	                   + `&page=${thePage}&size=${thePageSize}`
 	return this.http.get<GetResponseProducts>(searchUrl)
   }
