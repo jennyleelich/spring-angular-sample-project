@@ -11,7 +11,6 @@ import { environment } from 'src/environments/environment.development';
 export class ProductService {
  
 
-  private baseUrl = "http://localhost:8080/api/products?size=100"
   private env = environment;
 
   constructor(private http: HttpClient) {
