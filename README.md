@@ -46,7 +46,7 @@ Demo:Purchase success
 <img width="1009" alt="Screen Shot 2023-05-09 at 1 30 06 PM" src="https://github.com/jennyleelich/spring-angular-sample-project/assets/21067557/349cd457-bfb0-4fa9-8263-596eb7085979">
 
 Demo: Order History page
-<img width="995" alt="Screen Shot 2023-05-09 at 1 24 17 PM" src="https://github.com/jennyleelich/spring-angular-sample-project/assets/21067557/3d7a8938-e4ab-4a77-90d5-f40f24b3c9e7">
+<img width="1015" alt="Screen Shot 2023-05-09 at 1 51 06 PM" src="https://github.com/jennyleelich/spring-angular-sample-project/assets/21067557/17d013e9-edc7-4782-9af6-3a600d676a3f">
 
 
 
