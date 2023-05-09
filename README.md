@@ -35,9 +35,6 @@ Demo: Login page
 Demo: Sign In Page
 <img width="1002" alt="Screen Shot 2023-05-09 at 1 23 13 PM" src="https://github.com/jennyleelich/spring-angular-sample-project/assets/21067557/6c5fbcc4-d5ac-4f72-b0f3-fdd67ccbfe6c">
 
-Demo: Order History page
-<img width="995" alt="Screen Shot 2023-05-09 at 1 24 17 PM" src="https://github.com/jennyleelich/spring-angular-sample-project/assets/21067557/3d7a8938-e4ab-4a77-90d5-f40f24b3c9e7">
-
 Demo: Checkout Cart Page
 <img width="1009" alt="Screen Shot 2023-05-09 at 1 26 00 PM" src="https://github.com/jennyleelich/spring-angular-sample-project/assets/21067557/bce4acd6-24a3-484d-9c7e-64c7d22f7880">
 
@@ -45,10 +42,10 @@ Demo: Checkout Page
 <img width="1006" alt="Screen Shot 2023-05-09 at 1 26 59 PM" src="https://github.com/jennyleelich/spring-angular-sample-project/assets/21067557/aba0f0e3-784e-4680-b220-532859eee587">
 
 Demo:Purchase success
-
 <img width="1009" alt="Screen Shot 2023-05-09 at 1 30 06 PM" src="https://github.com/jennyleelich/spring-angular-sample-project/assets/21067557/349cd457-bfb0-4fa9-8263-596eb7085979">
 
-
+Demo: Order History page
+<img width="995" alt="Screen Shot 2023-05-09 at 1 24 17 PM" src="https://github.com/jennyleelich/spring-angular-sample-project/assets/21067557/3d7a8938-e4ab-4a77-90d5-f40f24b3c9e7">
 
 
 
