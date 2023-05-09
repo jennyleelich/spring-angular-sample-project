@@ -23,13 +23,14 @@
 
     visit link: http://jennyshop.s3-website.us-east-2.amazonaws.com( using safari...) 
 
-(2) Application Demo.
 
-      Demo: ProductList Page: 
-      <img width="930" alt="Screen Shot 2023-05-09 at 1 19 04 PM" src="https://github.com/jennyleelich/spring-angular-sample-project/assets/21067557/55c51d12-9449-4779-9c8f-fdab583e21c4">
+Application Demo.
 
-      Demo: Login page
-      <img width="932" alt="Screen Shot 2023-05-09 at 1 21 22 PM" src="https://github.com/jennyleelich/spring-angular-sample-project/assets/21067557/887bf13c-e3c5-43cd-bed9-a8e6e08ce0a1">
+  Demo: ProductList Page: 
+  <img width="930" alt="Screen Shot 2023-05-09 at 1 19 04 PM" src="https://github.com/jennyleelich/spring-angular-sample-project/assets/21067557/55c51d12-9449-4779-9c8f-fdab583e21c4">
+
+  Demo: Login page
+  <img width="932" alt="Screen Shot 2023-05-09 at 1 21 22 PM" src="https://github.com/jennyleelich/spring-angular-sample-project/assets/21067557/887bf13c-e3c5-43cd-bed9-a8e6e08ce0a1">
 
       Demo: Sign In Page
       <img width="1002" alt="Screen Shot 2023-05-09 at 1 23 13 PM" src="https://github.com/jennyleelich/spring-angular-sample-project/assets/21067557/6c5fbcc4-d5ac-4f72-b0f3-fdd67ccbfe6c">
