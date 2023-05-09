@@ -22,7 +22,7 @@
 
     MySQL 8.0.26  deployed in RDS, connect in jdbc:mysql://jennyshopdb.cycvbbr9rzgw.us-east-2.rds.amazonaws.com:3306
 
-    # visit link: http://jennyshop.s3-website.us-east-2.amazonaws.com( using safari...) 
+# visit link: http://jennyshop.s3-website.us-east-2.amazonaws.com( using safari...) 
 
 
 (2) Application Demo.
