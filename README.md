@@ -2,7 +2,7 @@
 
 # springboot 3 - angular 15 - project. visit: http://jennyshop.s3-website.us-east-2.amazonaws.com
 
-(1) Delplyment and Running Envirentment Request:
+(1) Delplyment and Running Envirenment Request:
 
     system: macOS Big Sur version 11.3
     node js v18.15.0
